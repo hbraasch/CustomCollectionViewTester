@@ -1,4 +1,6 @@
 ﻿
+using System.Diagnostics;
+
 namespace CustomCollectionViewTester
 {
     public interface ITreeviewItem
@@ -104,6 +106,7 @@ namespace CustomCollectionViewTester
                 var selectedCollectionViewItem = CollectionViewItems.FirstOrDefault(o => o.Title == CustomSelectedItem.Title);
                 ScrollTo(selectedCollectionViewItem, null, ScrollToPosition.Center, false);
                 SelectedItem = selectedCollectionViewItem;
+                Debug.WriteLine("Got here");
             }
         }
     }
